@@ -1,2 +1,11 @@
 public class BankAccount {
+    private int balance;
+
+    public void deposit(int i) {
+        balance += i;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
 }
