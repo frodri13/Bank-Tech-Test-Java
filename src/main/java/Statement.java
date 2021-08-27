@@ -4,10 +4,10 @@ import java.util.Collections;
 import static java.lang.String.valueOf;
 
 public class Statement {
-    String transactionResult;
     ArrayList<String> transactions = new ArrayList<>();
     String title = "date || credit || debit || balance";
     String results;
+    String resultsFinal;
 
     public void record(String transactionResult) {
         transactions.add(transactionResult);
@@ -15,7 +15,7 @@ public class Statement {
 
     public void arrayToString(){
         StringBuilder sb = new StringBuilder();
-        Collections.sort(transactions, Collections.reverseOrder());
+        sortList(transactions);
 
         for (String s : transactions) {
             sb.append(s);
@@ -24,10 +24,17 @@ public class Statement {
         results = valueOf(sb);
     }
 
-
-    public String print() {
-        return title + "\n" + results.substring(0, (results.length() -1));
+    public void sortList(ArrayList<String> transactions){
+        Collections.sort(transactions, Collections.reverseOrder());
     }
 
+    public void formatResult(){
+        resultsFinal = String.format("%s\n%s", title, results.substring(0, (results.length() -1)));
+    }
 
+    public String print() {
+        arrayToString();
+        formatResult();
+        return resultsFinal;
+    }
 }
