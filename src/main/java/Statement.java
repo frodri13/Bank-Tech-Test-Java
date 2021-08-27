@@ -9,8 +9,8 @@ public class Statement {
     String stringOfTransactions;
     String statement;
 
-    public void record(String transactionResult) {
-        transactions.add(transactionResult);
+    public void record(Transaction transaction) {
+        transactions.add(transaction.getTransaction());
     }
 
     public void arrayToString(){
