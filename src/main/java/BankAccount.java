@@ -4,17 +4,17 @@ public class BankAccount {
     private float balance;
     Statement statement = new Statement();
 
-    public void deposit(int i, LocalDate of) {
+    public void deposit(float i, LocalDate of) {
         balance += i;
        processTransactions(i, of, "DEPOSIT");
     }
 
-    public void withdraw(int i, LocalDate of){
+    public void withdraw(float i, LocalDate of){
         balance -= i;
         processTransactions(i, of, "WITHDRAW");
     }
 
-    public void processTransactions(int i, LocalDate of, String status) {
+    public void processTransactions(float i, LocalDate of, String status) {
         Transaction transaction = new Transaction(i, of, balance, status);
         statement.record(transaction);
     }
