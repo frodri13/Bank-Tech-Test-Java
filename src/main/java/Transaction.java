@@ -8,6 +8,7 @@ public class Transaction {
     String date;
     String balance;
     String status;
+    String result;
 
     Transaction(float value, LocalDate of, float balance, String status) {
         this.value = String.format("%.2f", value);
@@ -16,8 +17,16 @@ public class Transaction {
         this.status = valueOf(status);
     }
 
+    public void processTransaction() {
+        if (this.status == "DEPOSIT") {
+            result = String.format("%s || %s || - || %s", date, value, balance);
+        } else {
+            result = String.format("%s || - || %s || %s", date, value, balance);
+        }
+    }
+
     public String getTransaction() {
-        String result = String.format("%s || %s || - || %s", date, value, balance);
+        processTransaction();
         return result;
     }
 }

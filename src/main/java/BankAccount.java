@@ -11,6 +11,7 @@ public class BankAccount {
 
     public void withdraw(int i, LocalDate of){
         balance -= i;
+        processTransactions(i, of, "WITHDRAW");
     }
 
     public void processTransactions(int i, LocalDate of, String status) {
