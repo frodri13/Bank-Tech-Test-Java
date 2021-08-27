@@ -17,7 +17,6 @@ public class Transaction {
     }
 
     public String getTransaction() {
-//        return "10/01/2021 || 1000.00 || - || 1000.00";
         String result = String.format("%s || %s || - || %s", date, value, balance);
         return result;
     }

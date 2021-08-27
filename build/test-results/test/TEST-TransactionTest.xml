@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TransactionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-08-27T07:48:29" hostname="MacBook-Air-de-Sara.local" time="0.043">
-  <properties/>
-  <testcase name="returnsTheTransactionMade()" classname="TransactionTest" time="0.043"/>
-  <system-out><![CDATA[10/01/2021
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

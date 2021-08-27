@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="StatementTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-08-27T12:42:27" hostname="MacBook-Air-de-Sara.local" time="0.04">
+  <properties/>
+  <testcase name="itCanPrintOutTwoTransactions()" classname="StatementTest" time="0.036"/>
+  <testcase name="itCanPrintOutASimpleTransaction()" classname="StatementTest" time="0.003"/>
+  <system-out><![CDATA[13/01/2021 || 2000.00 || - || 3000.00
+10/01/2021 || 1000.00 || - || 1000.00
+
+10/01/2021 || 1000.00 || - || 1000.00
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
