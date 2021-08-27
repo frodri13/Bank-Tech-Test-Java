@@ -1,15 +1,19 @@
-public class BankAccount {
-    private int balance;
+import java.time.LocalDate;
 
-    public void deposit(int i) {
+public class BankAccount {
+    private float balance;
+
+    public void deposit(int i, LocalDate of) {
         balance += i;
     }
 
-    public void withdraw(int i){
+    public void withdraw(int i, LocalDate of){
         balance -= i;
     }
 
-    public int getBalance() {
+    public float getBalance() {
         return balance;
     }
+
+//    public String generateStatement(){ }
 }
