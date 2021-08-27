@@ -19,7 +19,7 @@ public class BankAccount {
         statement.record(transaction);
     }
 
-    public String getBalance() {
+    public String generateStatement() {
        return statement.print();
     }
 }

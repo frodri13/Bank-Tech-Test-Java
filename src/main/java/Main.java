@@ -8,8 +8,8 @@ public class Main {
 
         bankAccount.deposit(2000, LocalDate.of(2021, 1, 13));
 
-        bankAccount.deposit(500, LocalDate.of(2021, 1, 14));
+        bankAccount.withdraw(500, LocalDate.of(2021, 1, 14));
 
-//        System.out.println(bankAccount.generateStatement());
+        System.out.println(bankAccount.generateStatement());
     }
 }
