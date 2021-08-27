@@ -6,8 +6,8 @@ import static java.lang.String.valueOf;
 public class Statement {
     ArrayList<String> transactions = new ArrayList<>();
     String title = "date || credit || debit || balance";
-    String results;
-    String resultsFinal;
+    String stringOfTransactions;
+    String statement;
 
     public void record(String transactionResult) {
         transactions.add(transactionResult);
@@ -21,7 +21,7 @@ public class Statement {
             sb.append(s);
             sb.append("\n");
         }
-        results = valueOf(sb);
+        stringOfTransactions = valueOf(sb);
     }
 
     public void sortList(ArrayList<String> transactions){
@@ -29,12 +29,12 @@ public class Statement {
     }
 
     public void formatResult(){
-        resultsFinal = String.format("%s\n%s", title, results.substring(0, (results.length() -1)));
+        statement = String.format("%s\n%s", title, stringOfTransactions.substring(0, (stringOfTransactions.length() -1)));
     }
 
     public String print() {
         arrayToString();
         formatResult();
-        return resultsFinal;
+        return statement;
     }
 }
